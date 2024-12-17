@@ -3,6 +3,7 @@ import DashboardLayout from '@/components/layout/DashboardLayout';
 import StatCard from '@/components/dashboard/StatCard';
 import ContentTable from '@/components/dashboard/ContentTable';
 import { BarChart, FileText, Shield, Zap } from 'lucide-react';
+import { ContentItem } from '@/components/dashboard/ContentTable';
 
 const Dashboard = () => {
   const stats = [
@@ -12,7 +13,7 @@ const Dashboard = () => {
     { label: 'Total Views', value: '2.4K', icon: BarChart, color: 'bg-orange-500' },
   ];
 
-  const recentContent = [
+  const recentContent: ContentItem[] = [
     { title: 'Marketing Copy v2', type: 'text', status: 'registered', date: '2024-03-10' },
     { title: 'Product Banner', type: 'image', status: 'draft', date: '2024-03-09' },
     { title: 'Blog Post', type: 'text', status: 'registered', date: '2024-03-08' },
@@ -22,7 +23,7 @@ const Dashboard = () => {
     <DashboardLayout>
       <div className="space-y-8">
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <StatCard key={index} {...stat} />
