@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
-import { Button } from './ui/button';
 import Link from 'next/link';
 
 const Header = () => {
